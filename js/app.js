@@ -22,5 +22,10 @@ const displayTemperature = temperature => {
     setInnertext('weather', temperature.weather[0].main);
 
     // console.log(temperature);
+    // set weather icon
+    const url = `http://openweathermap.org/img/wn/${temperature.weather[0].icon}@2x.png`;
+    const imgIcon = document.getElementById('icon-img');
+    imgIcon.setAttribute('src',url);
+
 
 }
